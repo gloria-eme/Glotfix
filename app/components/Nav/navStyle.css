@@ -1,0 +1,28 @@
+nav {
+    height: 3rem;
+    background-color: rgba(51, 54, 53, 0.144);
+    transition: 0.5s linear;
+}
+ul {
+    display: flex;
+    justify-content: center;
+    gap: 5rem;
+    height: 3rem;
+    align-items: center;
+}
+
+li{
+    display: flex;
+    height: 2rem;
+    align-items: center;
+    justify-content: center;
+    width: 5rem;
+}
+
+li:hover {
+    
+    border-color:  rgb(177, 243, 221);
+    transition: 0.2s linear;
+    font-size: large;
+
+}
