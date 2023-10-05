@@ -13,13 +13,13 @@ body {
 
 .genre-gallery {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     position:relative;
     overflow-x: auto;
     height: 50vh;
     margin-top: 4rem;
     margin-left: 4rem;
-    background-color: rgba(230, 137, 137, 0.541); 
+    
 }
 
 .genre-container {
@@ -38,18 +38,19 @@ body {
 .movie-card {
      /* Los elementos movie-card no deben expandirse ni contraerse */
     position:relative;
-    display: block;
-    margin-top: 1rem;
+    display: flex;
+    justify-content:start;
+    margin-right: 2rem;
+    margin-top: 2rem;
     top: 50%;
-    left: 50%;
+    left: 20%;
     transform: translate(-50%, -50%);
-    background-color: rgba(243, 193, 193, 0.541);
-    max-width: 800px;
-    margin-right: 10px; /* Espacio entre las tarjetas de película */
-    background-color: #fff;
-    padding: 20px;
+    
+    max-height: 20rem ;
+   
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
    cursor: pointer;
+   text-decoration: none;
 }
 
 .movie-card:hover {
@@ -80,7 +81,7 @@ body {
     left: 50%; /* Coloca la parte izquierda de la tarjeta en el centro horizontal */
     transform: translate(-50%, -50%);
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
-    background-color: rgba(244, 231, 231, 0.79); 
+    background-color: rgba(7, 0, 0, 0.977);
     height: 25rem;
     width: 38rem;
     padding: 10px;
@@ -98,7 +99,6 @@ body {
     grid-area: 1 / 1 / 6 / 3;
     height: 100%;
    
-
     
 }
 
