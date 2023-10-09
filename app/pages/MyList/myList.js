@@ -4,20 +4,25 @@ import { savedMoviesList } from "../../components/SavedMovie/SavedMovie";
 import { CleanPage } from "../../utils/utils"
 
 export const MyList = () => {
-    const movieCard = document.querySelector(".movie-card");
-    const moviesContainer = document.querySelector(".movies-container")
-    // const myListContainer = document.createElement("div")
-    // myListContainer.classList.add("my-list-container")
-    
-    for (const item of savedMoviesList) { 
+    const moviesContainer = document.querySelector("#app")
+    const genreGallery = document.querySelector(".genre-gallery")
+    CleanPage(moviesContainer);
+    const savedMoviesCard = []
+  
+    for (const item of savedMoviesList) {
+       
+        CleanPage(genreGallery)
+        const movieCard = document.createElement("div");
+        movieCard.classList.add("movie-card");
         printMovie(movieCard, item)
-        CleanPage(moviesContainer)
-        moviesContainer.appendChild(movieCard)
-        console.log(moviesContainer)
-        console.log(savedMoviesList)
+        savedMoviesCard.push(movieCard)
     }
-    
 
+    for (const card of savedMoviesCard) {
+        genreGallery.appendChild(card)
+    }
+    moviesContainer.appendChild(genreGallery)
+    
 }
 
 

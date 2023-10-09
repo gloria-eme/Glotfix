@@ -23,6 +23,10 @@ time, mark, audio, video {
 	font: inherit;
 	vertical-align: baseline;
 }
+h1, h2, h3, p, li{
+	color: white;
+	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure, 
 footer, header, hgroup, menu, nav, section {
@@ -30,6 +34,8 @@ footer, header, hgroup, menu, nav, section {
 }
 body {
 	line-height: 1;
+background: rgb(0,0,0);
+background: linear-gradient(87deg, rgba(0,0,0,1) 23%, rgba(42,3,34,1) 74%);
 }
 ol, ul {
 	list-style: none;
