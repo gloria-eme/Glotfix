@@ -1,28 +1,29 @@
 nav {
-    height: 3rem;
-
-    transition: 0.5s linear;
+    height: 4rem;
+    
+    align-content: center;
+    /* background-color:  rgba(240, 231, 231, 0.671); */
+    
+    
 }
 ul {
     display: flex;
     justify-content: center;
     gap: 5rem;
-    height: 3rem;
-    align-items: center;
+    height: 4rem;
+    align-items: center; 
 }
 
-li{
+li {
     display: flex;
     height: 2rem;
     align-items: center;
     justify-content: center;
     width: 5rem;
+    margin-top: 2rem;
+  
 }
 
 li:hover {
-    
-    border-color:  rgb(177, 243, 221);
-    transition: 0.2s linear;
-    font-size: large;
-
+    border-bottom: 3px solid rgba(117, 115, 120, 0.772);
 }

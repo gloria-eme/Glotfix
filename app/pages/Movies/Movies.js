@@ -2,13 +2,6 @@ import { GenreGallery } from "../../components/MovieGallery/MovieGallery"
 import { CleanPage } from "../../utils/utils"
 import "./moviesStyle.css"
 
-
-// const getMovies = async () => {
-//     const movies = await getData()
-//     console.log("movies", movies)
-//     
-// }
-
 const app = document.querySelector("#app")
 
 export const printMovies = () => {

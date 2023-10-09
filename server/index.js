@@ -11,7 +11,7 @@ server.use(router);
 //Es importante tener en el script dev "node index.js", el se encargará de levantar el json server
 
 //Importante tener en el gitignore node_modules
-server.listen(8080, () => {
+server.listen(3000, () => {
   console.log("JSON Server is running");
 });
 
