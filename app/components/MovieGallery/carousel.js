@@ -6,7 +6,7 @@ const prevButtons = document.querySelectorAll(".prev-button");
 prevButtons.forEach((prevButton) => {
     prevButton.addEventListener("click", () => {
         const carousel = prevButton.parentElement.querySelector(".carousel");
-        const scrollAmount = -50; // Ajusta el valor según tu preferencia
+        const scrollAmount = -50; // Ajusta el valor según la preferencia
         carousel.scrollLeft += scrollAmount;
     });
 });

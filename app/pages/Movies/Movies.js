@@ -1,19 +1,23 @@
-import { GenreGallery } from "../../components/MovieGallery/MovieGallery"
+import { GenreGalery } from "../../components/MovieGallery/MovieGallery"
+import { Nav } from "../../components/Nav/nav"
+import { isLogged } from "../../components/Register/register"
+
 import { CleanPage } from "../../utils/utils"
 import "./moviesStyle.css"
 
-const app = document.querySelector("#app")
+
 
 export const printMovies = () => {
-    const section = document.createElement("section")
-    section.classList.add("movies-container");
-    CleanPage(app);
-    app.appendChild(section)
-    GenreGallery("Thriller")
-    GenreGallery("Drama")
-    GenreGallery("Cartoon")
+   
+    const moviesContainer = document.querySelector(".movies-container")
+    CleanPage(moviesContainer);
+    GenreGalery("Thriller")
+    GenreGalery("Drama")
+    GenreGalery("Cartoons")
 }
 
 export const Movies = () => {
+    Nav()
     printMovies()
+    isLogged()
 };
