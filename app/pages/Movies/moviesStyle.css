@@ -1,7 +1,8 @@
 body {
     background: url("https://images.unsplash.com/photo-1464618663641-bbdd760ae84a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80");
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size:cover;
+    
 }
 
 .movies-container {
@@ -13,7 +14,7 @@ body {
     margin-top: 2rem;
 }
 
-.genre-gallery {
+.genre-galery {
     display: flex;
     flex-direction: column;
     position:relative;
@@ -42,7 +43,7 @@ body {
     flex-wrap: nowrap; /* Evita el salto de línea */
      /* Agrega una barra de desplazamiento horizontal si es necesario */
      width: 98%;
-     height: 50vh;
+     height: 40vh;
      margin-left: 1.5rem;
      background-color: rgba(2, 26, 19, 0.18); 
      border-radius: 30px;
@@ -63,7 +64,7 @@ body {
     -ms-overflow-style: none; /* Oculta la barra de desplazamiento en IE/Edge */
     -ms-overflow-style: none;
     transition: scroll-behavior 0.20s ease-in-out;
-    height: 58vh;
+    height: 50vh;
     max-width: 93%;
     gap: .5rem;
     margin-left: 3.8rem;
@@ -109,4 +110,33 @@ body {
 
 .carousel-button:active{
     height: 2.3rem;
+}
+
+.movie-card {
+    position:relative;
+    display: flex;
+    justify-content:flex-start;
+    margin-right: 2rem;
+    margin-top: 2rem;
+    padding: .5rem;
+    margin-left: 0.2rem;
+    top: 50%;
+    left: 7%;
+    transform: translate(-50%, -50%);
+   width: 14rem;
+   height: 20rem;
+    cursor: pointer;
+    text-decoration: none;
+    transition:  0.3s ease;
+
+}
+
+.movie-card:hover {
+    box-shadow: inset 0 0 0 2px #f8f4f4;
+    border-radius: 15px;
+    background-color: rgba(211, 207, 207, 0.352);
+}
+
+.movie-card.active {
+    display: block;
 }

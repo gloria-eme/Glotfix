@@ -1,6 +1,6 @@
 nav {
     height: 4rem;
-    
+    display: flex;
     align-content: center;
     /* background-color:  rgba(240, 231, 231, 0.671); */
     
@@ -26,4 +26,8 @@ li {
 
 li:hover {
     border-bottom: 3px solid rgba(117, 115, 120, 0.772);
+}
+
+nav h2{
+
 }

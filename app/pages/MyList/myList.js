@@ -5,7 +5,7 @@ import { CleanPage } from "../../utils/utils"
 import { displayMovieCard } from "../../components/MovieCard/MovieCard";
 
 export const MyList = () => {
-    const moviesContainer = document.querySelector("#app")
+    const moviesContainer = document.querySelector(".movies-container")
     CleanPage(moviesContainer);
     const myListContainer = document.createElement("div")
     myListContainer.classList.add("myList-container")

@@ -1,6 +1,19 @@
+import { Movies } from "../../pages/Movies/Movies"
+import { MyList } from "../../pages/MyList/myList"
+import { LinkPage, insertDom } from "../../utils/utils"
 import "./navStyle.css"
 
-export const Nav =  () =>  `
+
+
+export const Nav = () => {
+    insertDom ("#header", nav)
+    LinkPage("#savedlink", MyList)
+    LinkPage("#movieslink", Movies)
+}
+
+
+const nav =  () =>  
+`
 <nav>
     <ul>
         <li>
@@ -10,5 +23,6 @@ export const Nav =  () =>  `
             <a href="#" id="savedlink">Mi lista</a>
         </li>
     </ul>
+    <h2>Hola ${localStorage.username}</h2>
 </nav>
 `
