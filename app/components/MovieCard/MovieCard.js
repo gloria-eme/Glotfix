@@ -1,6 +1,7 @@
 import { CleanPage } from "../../utils/utils"
-import "../../pages/Movies/moviesStyle.css"
-import { savedMovies } from "../SavedMovie/SavedMovie";
+import "./movieCardStyle.css"
+import { savedMovies } from "../SavedMovie";
+import { isMovieSaved } from "../../pages/MyList/myList";
 
 const movieCardContainer = document.createElement("div");
     movieCardContainer.classList.add("movie-card-container");
@@ -8,7 +9,7 @@ const movieCardContainer = document.createElement("div");
 export const displayMovieCard = (item) => {   
     
     printCardMovie(movieCardContainer, item)
-    const section = document.querySelector(".genre-container")
+    const section = document.querySelector("#app")
     section.appendChild(movieCardContainer);
     const closeButton = movieCardContainer.querySelector(".close-button");
     closeButton.addEventListener('click', () => {
@@ -18,7 +19,9 @@ export const displayMovieCard = (item) => {
     const savedButton = document.querySelector(".saveButton")
     savedButton.addEventListener("click", () => {
         savedMovies(item)
+        savedButton.textContent = "Guardada";
     })
+    
     PlayMovie();
 };
 
@@ -34,7 +37,7 @@ export const printCardMovie = (element, item) => {
         </div>
         <p class="p-card">Snopsis: ${item.description}</p>
         <button class="watch">Ver</button>
-        <button class="saveButton">Guardar</button>
+        <button class="saveButton"> ${isMovieSaved(item.id) ? "Guardada" : "Guardar"} </button>
     </div>`;
 }
 

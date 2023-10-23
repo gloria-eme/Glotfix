@@ -1,0 +1,102 @@
+.login-section {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 2rem;
+    justify-content: center;
+    margin-top: 15vh; 
+    position: relative;
+    margin-top: 5rem;
+}
+
+.h1-login {
+    font-size: 2rem; /* Tamaño inicial */
+    font-weight: bold;
+    color:#e96315;
+    text-shadow: 0.2em 0.07em 0.14em rgb(32, 32, 32);
+    margin-bottom: 5rem;
+    top: 0%;
+    animation: scaleUp 2s ease-in-out 2s forwards; /* Animación de crecimiento */
+    letter-spacing: .15rem;
+    position: absolute;
+}
+
+/* Estilo para la animación de crecimiento */
+@keyframes scaleUp {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1.5);
+        font-size: 2.5rem; /* Tamaño final */
+    }
+}
+
+
+.login-container {
+    box-shadow: 5px 5px 17px;
+    background-color: rgba(255, 255, 255, 0.578);
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    align-content: center;
+    width: 30%;
+    height: 30%;
+    border-radius: 20px;
+    padding: 4%;
+    min-width: 200px;
+    max-width:350px;
+    margin-top: 10rem;
+}
+
+.h2-login {
+    color: #030303;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 2rem;
+    margin-top: -1%;
+    text-align: center;
+    letter-spacing: 2px;
+}
+
+
+.login{
+    margin: 1rem 1rem;
+    width: 80%;
+    align-content: center;
+    margin-bottom: 4rem;
+
+}
+
+.login label{
+   font-size: 1.1rem;
+   font-family: 'Franklin Gothic Medium';
+   margin-top: 1rem;
+}
+
+.login input {
+    width: 90%;
+    padding: 5%;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-top: 1rem;
+    margin-bottom: 1rem; 
+}
+
+.password-error {
+    position: absolute;
+    color: #b34206;
+    font-size: 1rem;
+    display: none; 
+    margin-left: -2rem;
+}
+
+.submit {
+    padding: 10px;
+    font-size: 1.2rem;
+    width: 80%;
+    
+}
+

@@ -2,11 +2,11 @@ import { Movies } from './pages/Movies/Movies';
 import { Nav } from './components/Nav/nav';
 import { MyList } from './pages/MyList/myList';
 import './style.css'
-import { LinkPage, insertDom } from './utils/utils';
+import { LinkPage } from './utils/utils';
+import { RegisterName } from './components/Register/register';
 
 
-insertDom ("#header", Nav)
 
 
-LinkPage("#savedlink", MyList)
-LinkPage("#movieslink", Movies)
+RegisterName()
+

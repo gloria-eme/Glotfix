@@ -1,42 +1,63 @@
 import { getData } from "../../services/services"
 import { displayMovieCard } from "../MovieCard/MovieCard";
+import { searchMovie } from "../SearchMovie";
+import { Scroll } from "./carousel";
 
 
 
 
-export const GenreGallery = async (param) => {
-        const movies = await getData(param)
-        const genreGallery = document.createElement("div")
-        genreGallery.classList.add("genre-gallery");
-        genreGallery.innerHTML += `
+export const GenreGalery = async (genre) => {
+        const movies = await getData()
+        const filterGenre = movies.filter((movie) => movie.genre == genre)
+    
+        const genreGalery = document.createElement("div")
+        genreGalery.classList.add("genre-galery");
+        genreGalery.innerHTML += `
             <div class="genre-title"> 
-                <h1>${param} movies</h1>
+                <h1>${genre} movies</h1>
             </div>
             
             `
         const genreContainer = document.createElement("div")
         genreContainer.classList.add("genre-container");
-        genreGallery.appendChild(genreContainer)
+        searchMovie(movies)
 
-        for (const item of movies) { 
+        const prevButton = document.createElement("button")
+        prevButton.classList.add("carousel-button", "prev-button")
+        const carousel = document.createElement("div")
+        carousel.classList.add("carousel")
+    
+        const nextButton = document.createElement("button")
+        nextButton.classList.add("carousel-button", "next-button")
+        
+        for (const item of filterGenre) { 
             const movieCard = document.createElement("div");
             movieCard.classList.add("movie-card");
-            printMovie(movieCard, item)
-            genreContainer.appendChild(movieCard);
-            
+           
+           printMovie(movieCard, item)
+            carousel.appendChild(movieCard);
             movieCard.addEventListener("click", () => {
             const selectedMovie = movies.find((movie) => movie.id === item.id);
             displayMovieCard(selectedMovie)
             })
+           Scroll()
         };
-        const gallery = document.querySelector(".movies-container");
-        gallery.appendChild(genreGallery)
+        genreContainer.appendChild(prevButton)
+        genreContainer.appendChild(carousel)
+        genreContainer.appendChild(nextButton)
+       
+        genreGalery.appendChild(genreContainer)
+        
+        const moviesContainer = document.querySelector(".movies-container");
+        moviesContainer.appendChild(genreGalery)
+    
 };
 
 export const printMovie = (element, item) => {
     element.innerHTML = `
-    <img src="${item.image}" alt="movie-cover" id="${item.id}" />
+    <img class="img-carousel" src="${item.image}" alt="movie-cover" id="${item.id}" />
     `;
+    
 }
 
 

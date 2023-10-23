@@ -1,0 +1,14 @@
+.myList-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items:flex-start;
+    position: relative;
+    overflow: hidden;
+     height: 60vh;
+     padding-left: 4rem;
+     margin:  2rem;
+     background-color: rgba(2, 26, 19, 0.18); ;
+     border-radius: 30px;
+}
+
