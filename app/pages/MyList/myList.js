@@ -1,6 +1,6 @@
 import "./myList.css"
 import { printMovie } from "../../components/MovieGallery/MovieGallery";
-import { savedMoviesList } from "../../components/SavedMovie/SavedMovie";
+import { savedMoviesList } from "../../components/SavedMovie";
 import { CleanPage } from "../../utils/utils"
 import { displayMovieCard } from "../../components/MovieCard/MovieCard";
 

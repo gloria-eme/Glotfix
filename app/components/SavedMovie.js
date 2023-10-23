@@ -1,5 +1,3 @@
-import "./savedMovie.css"
-
 export const savedMoviesList = []
 
 export const savedMovies = (item) => {

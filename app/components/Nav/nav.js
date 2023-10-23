@@ -12,8 +12,7 @@ export const Nav = () => {
 }
 
 
-const nav =  () =>  
-`
+const nav =  () => `
 <nav>
     <ul>
         <li>
@@ -23,6 +22,6 @@ const nav =  () =>
             <a href="#" id="savedlink">Mi lista</a>
         </li>
     </ul>
-    <h2>Hola ${localStorage.username}</h2>
+    <div>Hola ${localStorage.username}</div>
 </nav>
 `

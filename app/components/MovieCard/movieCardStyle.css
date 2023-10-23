@@ -1,8 +1,10 @@
 
 
 .img-carousel {
-    width: 15rem;
+    width: 12rem;
     border-radius: 15px;
+    height: 100%;
+    
 }
 
 .genre-title {

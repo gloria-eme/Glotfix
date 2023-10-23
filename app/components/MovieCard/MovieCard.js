@@ -1,6 +1,6 @@
 import { CleanPage } from "../../utils/utils"
 import "./movieCardStyle.css"
-import { savedMovies } from "../SavedMovie/SavedMovie";
+import { savedMovies } from "../SavedMovie";
 import { isMovieSaved } from "../../pages/MyList/myList";
 
 const movieCardContainer = document.createElement("div");

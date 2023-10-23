@@ -23,13 +23,29 @@ time, mark, audio, video {
 	font: inherit;
 	vertical-align: baseline;
 }
-h1, h2, h3, p, li{
+h1, h2, h3, p, li, button{
 	color: rgb(3, 3, 3);
 	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
+
+button{
+	background-color: #e96315;
+    color: rgb(0, 0, 0);
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    
+}
+button:hover {
+    box-shadow: .5px .5px 3px;
+}
+button:active {
+    box-shadow: .5px .5px 6px;
+}
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
+footer, header, hgroup, menu, section {
 	display: block;
 }
 body {

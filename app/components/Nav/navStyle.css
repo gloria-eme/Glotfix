@@ -1,17 +1,19 @@
 nav {
-    height: 4rem;
+    height: 3.5rem;
     display: flex;
-    align-content: center;
-    /* background-color:  rgba(240, 231, 231, 0.671); */
-    
+     background-color:  rgba(20, 31, 43, 0.329);
+    justify-content: space-around;
+    align-items: center;
     
 }
+
 ul {
     display: flex;
     justify-content: center;
     gap: 5rem;
     height: 4rem;
-    align-items: center; 
+    align-items: center;
+    
 }
 
 li {
@@ -20,8 +22,8 @@ li {
     align-items: center;
     justify-content: center;
     width: 5rem;
-    margin-top: 2rem;
   
+   
 }
 
 li:hover {
@@ -29,5 +31,5 @@ li:hover {
 }
 
 nav h2{
-
+    flex-direction: row
 }
